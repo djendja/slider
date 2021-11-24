@@ -1,0 +1,22 @@
+.slider {
+    width: 1200px;
+    margin-left: 450px;
+    &__wrap {
+        display: flex;
+        width: 800px;
+        // overflow: hidden;
+        border: 5px solid;
+    }
+    &__img {
+       width: 800px;
+    }
+
+    &__button {
+        width: 200px;
+        & left {
+            width: 100px;
+        }
+    }
+
+     
+}
