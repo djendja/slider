@@ -28,14 +28,18 @@ class Slider {
         }
         
         
-        this.counter = 0;
-        this.imageCount = this.data.items.length;
         this.ctx = this.createCtx();
         this.leftButton = this.createButton(this.left.html, this.left.classB);
         this.rightButton = this.createButton(this.right.html, this.right.classB);
         this.createComponent();
+        
         this.width = this.ctx.querySelector('.slider__wrap').offsetWidth;
+        // console.log(this.width);
         this.sliderWrap = this.ctx.querySelector('.slider__wrap');
+       
+        this.counter = 0;
+        this.imageCount = this.data.items.length;
+       
         this.leftButton.addEventListener("click",this.slideToLeft.bind(this));
         this.rightButton.addEventListener("click", this.slideToRight.bind(this));
         window.addEventListener("resize", this.handleResize.bind(this));
@@ -100,10 +104,9 @@ class Slider {
     }
 
     handleResize() {
-        let currentCounter = this.counter;
         let currentWidth = this.ctx.querySelector('.slider__wrap').offsetWidth;
         this.width = currentWidth;
-        this.sliderWrap.style.transform = 'translateX(' + (-this.width * currentCounter) + 'px)';
+        this.sliderWrap.style.transform = 'translateX(' + (-this.width * this.counter) + 'px)';
     }
     
 }
