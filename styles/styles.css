@@ -31,6 +31,17 @@
   width: 100%;
 }
 
+.fade{
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: 0.3}
+  to {opacity: 1}
+}
+
+
 .slider__button {
    /* width: 800px; */
 }
@@ -71,4 +82,18 @@
 }
 /*# sourceMappingURL=styles.css.map */
 
+.dots__wrap {
+  position: absolute;
+  bottom: 3%;
+  left:43%;
+}
 
+.dot {
+  margin: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(246, 246, 246);
+  cursor: pointer;
+}
