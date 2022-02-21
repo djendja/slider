@@ -97,3 +97,7 @@
   background-color: rgb(246, 246, 246);
   cursor: pointer;
 }
+
+.active {
+  background-color: hotpink;
+}
